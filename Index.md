@@ -38,3 +38,4 @@
 - [Version evolution](Version evolution.md)
 - [Mode C 交叉矩阵](Analysis/MODE_C_001_交叉矩阵.md)
 - [首个 Idea 卡片](Analysis/IDEA_001_接触预测闭环抓取.md)
+- [公开材料核验记录](Literature/公开材料核验记录.md)
