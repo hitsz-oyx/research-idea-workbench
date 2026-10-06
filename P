@@ -1,0 +1,3 @@
+# ai_idea research project marker
+
+This file marks the project root. See Index.md for the research map.

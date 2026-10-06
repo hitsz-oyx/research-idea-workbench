@@ -1,0 +1,31 @@
+# Python and experiment caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Large/generated experiment outputs
+Code Output/*
+!Code Output/.gitkeep
+*.log
+*.ckpt
+*.pth
+*.pt
+*.npz
+*.npy
+*.bag
+*.rosbag
+
+# Local secrets and machine-specific files
+.env
+.DS_Store
+
+# Temporary downloads and conversion artifacts
+*.part
+*.tmp
+Literature/_tmp/
+
+# Keep the project marker and research records tracked.
