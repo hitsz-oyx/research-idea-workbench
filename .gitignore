@@ -10,6 +10,8 @@ venv/
 # Large/generated experiment outputs
 Code Output/*
 !Code Output/.gitkeep
+Papers/*.pdf
+Papers/*.txt
 *.log
 *.ckpt
 *.pth

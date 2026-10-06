@@ -2,17 +2,17 @@
 
 ## 研究主线
 
-暂定题目：**Contact-Predictive World Models for Uncertainty-Aware Dexterous Grasping**。
+暂定题目：**Failure-Aware Cross-Embodiment Contact World Models for Dexterous Grasping**。
 
-核心问题：给定部分视觉、手部本体感觉和触觉历史，世界模型能否预测未来接触状态与抓取稳定性，并让策略在闭合手指前选择更稳健的动作/重规划时机？
+核心问题：当首次接触出现失触或滑移时，世界模型能否保持风险校准、选择恢复动作，并迁移到未见手型？
 
 ## 阶段计划
 
-1. **文献与证据矩阵**：完成 S01–S06 的分析包和 Mode C 矩阵，标记所有 unknown。
-2. **低成本诊断**：先不训练完整视频扩散模型，使用公开/仿真轨迹检验接触力的时间变化对 release/slip 的增量预测价值。
-3. **最小世界模型**：训练轻量 latent dynamics，输入点云/视觉、关节状态、触觉摘要和候选动作，输出未来接触状态、物体位姿和不确定性。
-4. **闭环验证**：与静态抓取生成器 + 反应式控制、无触觉世界模型、无模型策略比较。
-5. **消融与回流**：去掉力的时间差分、空间位置、uncertainty head、主动探测动作，使用 `record-experiment → squeeze-experiment → deep-read`。
+1. **文献与证据矩阵**：完成 S01–S12 的全文分析，重点记录失败、校准和跨手型边界。
+2. **低成本诊断**：在成功轨迹上注入单因素接触错误，比较 success-only 与 failure-aware 世界模型在错误后的退化。
+3. **最小世界模型**：预测接触模式、滑移风险、对象状态和不确定性，先使用低维状态而不是视频扩散。
+4. **跨手型验证**：按手型留出，测试共享几何接触状态是否支持迁移。
+5. **闭环验证与回流**：通过风险触发恢复动作验证控制价值，再执行 `record-experiment → squeeze-experiment → deep-read`。
 
 ## 成功标准
 

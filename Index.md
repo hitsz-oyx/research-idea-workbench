@@ -19,7 +19,7 @@
 |---|---|
 | `ref.txt` | 用户给出的科研流程 |
 | `skills/` | 已安装的研究 skills 与交接协议 |
-| `Papers/` | 论文 PDF（当前网络下载不稳定，先以链接和证据定位为主） |
+| `Papers/` | 已下载并解析的论文 PDF/TXT（大文件不纳入 Git） |
 | `Literature/` | 论文解析笔记与 ANALYSIS_PACKAGE |
 | `Analysis/` | Mode C 矩阵、Idea 卡片及分析文档 |
 | `Source/` | 外部开源代码、数据和复现材料 |
@@ -38,4 +38,6 @@
 - [Version evolution](Version evolution.md)
 - [Mode C 交叉矩阵](Analysis/MODE_C_001_交叉矩阵.md)
 - [首个 Idea 卡片](Analysis/IDEA_001_接触预测闭环抓取.md)
+- [第二轮 Mode C 矩阵](Analysis/MODE_C_002_失败恢复与跨手型接触世界模型矩阵.md)
+- [推荐 Idea-002](Analysis/IDEA_002_失败感知跨手型接触世界模型.md)
 - [公开材料核验记录](Literature/公开材料核验记录.md)
