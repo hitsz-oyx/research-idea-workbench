@@ -7,11 +7,11 @@ __pycache__/
 .venv/
 venv/
 
-# Large/generated experiment outputs
-Code Output/*
-!Code Output/.gitkeep
-Papers/*.pdf
-Papers/*.txt
+# Large/generated experiment outputs in any task
+**/Code Output/*
+!**/Code Output/.gitkeep
+**/Papers/*.pdf
+**/Papers/*.txt
 *.log
 *.ckpt
 *.pth
@@ -28,6 +28,6 @@ Papers/*.txt
 # Temporary downloads and conversion artifacts
 *.part
 *.tmp
-Literature/_tmp/
+**/Literature/_tmp/
 
 # Keep the project marker and research records tracked.

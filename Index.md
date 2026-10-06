@@ -1,44 +1,36 @@
-# 灵巧手抓取 × 世界模型：项目索引
+# Research Idea Workbench
 
-更新时间：2026-10-06
+这是一个用于寻找、筛选和验证科研 idea 的通用仓库。仓库根目录不绑定某个研究领域；每个具体方向都放在 `tasks/` 下，拥有自己的论文、分析、代码、实验记录和版本演化。
 
-## 研究目标
+## 当前任务
 
-围绕多指灵巧手抓取，验证世界模型是否能通过预测“接触力演化—未来手物状态—抓取结果”，减少视觉遮挡和接触不确定性导致的失败，并支持低成本闭环重规划。
+| Task | 主题 | 状态 | 入口 |
+|---|---|---|---|
+| `dexterous-grasping-world-model` | 灵巧手抓取 × 触觉世界模型 | 诊断阶段 | [Task Index](tasks/dexterous-grasping-world-model/Index.md) |
 
-## 当前状态
+后续可以直接在 `tasks/` 下增加新的方向，例如 `vision-language-action`、`robot-learning` 或其他完全不同的研究主题。Task 名称使用小写短横线，不把某个暂时的 idea 写进目录名。
 
-- 阶段：文献边界复核与单故障动作排序诊断
-- 当前证据：`partial`；主要依据为公开论文页面/摘要，尚未复现源码或获取同一硬件数据
-- 推荐主线：单一滑移故障下的配对失败数据与触觉动作排序
-- 首个动作：在一个仿真手型和一个抓取任务上比较 success-only 与 paired-failure
+## 通用科研流程
 
-## 目录
+1. 读取 [ref.txt](ref.txt)，明确从论文到 idea、实验和回流分析的流程。
+2. 在 `tasks/<task-slug>/Literature/` 保存论文笔记、证据核验和公开材料记录。
+3. 在 `tasks/<task-slug>/Analysis/` 保存交叉矩阵、Idea 卡片和实验设计。
+4. 在对应 Task 内运行 `record-experiment → squeeze-experiment → deep-read` 的回流流程。
+5. 只有经过验证的结论才进入 Task 的主线；过时方案放入该 Task 的 `Analysis废弃的/`。
+
+## 根目录
 
 | 路径 | 用途 |
 |---|---|
-| `ref.txt` | 用户给出的科研流程 |
-| `skills/` | 已安装的研究 skills 与交接协议 |
-| `Papers/` | 已下载并解析的论文 PDF/TXT（大文件不纳入 Git） |
-| `Literature/` | 论文解析笔记与 ANALYSIS_PACKAGE |
-| `Analysis/` | Mode C 矩阵、Idea 卡片及分析文档 |
-| `Source/` | 外部开源代码、数据和复现材料 |
-| `Code/` | 本项目代码 |
-| `Code Output/` | 运行日志和生成结果 |
-| `Sessions/` | 对话和过程记录 |
-| `Analysis实验报告/` | 实验分析报告 |
-| `Analysis废弃的/` | 废弃方案，保留历史 |
+| `ref.txt` | 通用科研流程和文件约定 |
+| `skills/` | 本项目使用的研究 skill 与交接协议 |
+| `skills.zip` | skill 安装包归档 |
+| `tasks/` | 独立研究方向，每个方向自包含 |
+| `P` | 项目根目录标记 |
 
-## 关键文档
+## 目录原则
 
-- [论文笔记](论文笔记.md)
-- [论文素材库](论文素材库.md)
-- [已发现的实验现象](已发现的实验现象.md)
-- [Paper plan](Paper plan.md)
-- [Version evolution](Version evolution.md)
-- [Mode C 交叉矩阵](Analysis/MODE_C_001_交叉矩阵.md)
-- [首个 Idea 卡片](Analysis/IDEA_001_接触预测闭环抓取.md)
-- [第二轮 Mode C 矩阵](Analysis/MODE_C_002_失败恢复与跨手型接触世界模型矩阵.md)
-- [推荐 Idea-002](Analysis/IDEA_002_失败感知跨手型接触世界模型.md)
-- [当前收缩版 Idea-003](Analysis/IDEA_003_触觉失败后的动作排序.md)
-- [公开材料核验记录](Literature/公开材料核验记录.md)
+- 根目录只放跨任务的流程、规范和任务索引。
+- 论文 PDF、源码、实验代码和实验输出必须放入具体 Task，避免不同方向互相污染。
+- 一个 Task 可以有多个 IDEA；Task 目录名描述研究方向，Idea 文件名描述具体假设。
+- 未验证的假设标记为 `diagnostic`，不要直接写成论文贡献。
