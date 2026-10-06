@@ -1,5 +1,7 @@
 # Idea: 失败感知的跨手型接触世界模型
 
+> **状态调整（2026-10-06）：deferred / overbroad。** FACT、Dream2Fix、TouchWorld、FeelWorld 和 DexTacWAM 已覆盖其中多个核心组件；“失败训练 + 不确定性 + 恢复 + 跨手型”不再作为当前主线。当前主线收缩为 [IDEA-003](IDEA_003_触觉失败后的动作排序.md) 的单任务、单故障、动作排序诊断。
+
 ## 交接元数据
 
 - 包类型：`IDEA_PACKAGE`

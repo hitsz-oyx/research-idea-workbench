@@ -6,3 +6,4 @@
 | v0.1 | 2026-10-06 | 首个诊断先检验力的时间变化，而非直接训练大模型 | 成本低，能区分 S05 的关键机制是否可迁移 |
 | v0.2 | 2026-10-06 | 发现 DexTouch-WM 后暂停原 Idea 的新颖性主张 | 该工作已覆盖动作条件触觉世界模型、人到机器人迁移和策略评估，必须先做差异化审计 |
 | v0.3 | 2026-10-06 | 下载并全文核验 S01–S12，新增 IDEA-002 | FeelWorld、TouchWorld、TacForeSight、DexTacWAM 已覆盖预测/规划/反应，研究问题收窄到首次失败后的校准恢复与跨手型泛化 |
+| v0.4 | 2026-10-06 | 将 IDEA-002 标记为 deferred/overbroad，新增 IDEA-003 | FACT、Dream2Fix 已覆盖失败感知训练和反事实恢复；TouchWorld、FeelWorld、DexTacWAM 已覆盖触觉世界模型，主线收缩为单手型、单故障、动作排序诊断 |
